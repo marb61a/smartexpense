@@ -26,6 +26,32 @@
 						</div>
 					</form>
 				</li>
+
+				<li>
+					<img 
+						src="/img/favicon.png" 
+						class="img-rounded avatar" 
+						height="40px" 
+						style="position: relative;;margin-top:0px; margin-right: 5px; width: 32px;"
+					>
+				</li>
+
+				<li class="dropdown">
+					<a 
+						href="#" 
+						class="dropdown-toggle dropdown dropdown-border" 
+						data-toggle="dropdown" 
+						role="button"
+					>
+						<i class="fa fa-cog fa-lg heading-style"></i><span class="heading-style caret"></span>	
+					</a>
+
+					<ul class="dropdown-menu">
+						<li><a href="">Name</a></li>
+						<li><a href="">Profile</a></li>
+						<li><a href="{{ route('logout') }}">Logout</a></li>
+					</ul>
+				</li>
 			</div>
 		</div>
 	</div>
