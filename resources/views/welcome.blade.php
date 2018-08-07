@@ -10,6 +10,11 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
+        <link rel="stylesheet" href="/css/bootstrap.css" rel="stylesheet">
+
+        <script src="/js/jquery.js"></script>
+        <script src="/js/bootstrap.js"></script>
+
         <!-- Styles -->
         <style>
             html, body {
