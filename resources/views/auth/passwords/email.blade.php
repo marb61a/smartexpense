@@ -35,7 +35,24 @@
                     @endif
                 </div>
             </div>
-        </form>        
+
+            <div class="form-group">
+                <div class="col-sm-12">
+                    <button type="submit" class="btn btn-danger btn-block">
+                        Send Password Reset Link
+                    </button>
+                </div>
+            </div>
+
+        </form>    
+
+        <h5 class="text-center">
+            Don't have an account? <a href="{{ route('register') }}">Sign Up</a>
+        </h5>
+        <h5 class="text-center">
+            Go Home <a href="{{ route('login') }}">Sign In</a>
+        </h5>
+
     </div>
 
 @endsection
