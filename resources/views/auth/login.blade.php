@@ -10,7 +10,7 @@
             <div class="form-group">
                 <div class="col-sm-12">
                   <h3 class="text-center">Login to 
-                    <span class="text-color">Smart Expenses</span>
+                    <span class="text-color">LaraSmart Expenses</span>
                   </h3>
                 </div>
             </div> 

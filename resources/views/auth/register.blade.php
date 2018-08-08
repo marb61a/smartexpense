@@ -12,7 +12,7 @@
                 <div class="form-group">
                     <div class="col-sm-12">
                         <h3 class="text-center">Sign Up to 
-                            <span class="text-color">LaraExpenses</span>
+                            <span class="text-color">LaraSmart Expenses</span>
                         </h3> 
                     </div>
                 </div>
@@ -94,8 +94,43 @@
                     </div>
                 </div>
 
+                <div class="form-group">
+                    <label for="country" class="form-control-label col-sm-2">
+                        Country
+                    </label>
+                    <div class="col-sm-10">
+                        <select class="form-control" name="country" id="country" onchange="get_zones($(this).val())">
+                            <option value=""> Choose Country</option>
+                                        
+                        </select>
+
+                        @if($errors->has('country'))
+                            <span class="help-block">
+                                <strong>
+                                    {{ $errors->first('country') }}
+                                </strong>
+                            </span>
+                        @endif 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <button type="submit" class="btn btn-danger btn-block">
+                            {{ __('Register') }}
+                        </button>
+                    </div>        
+                </div>
+
             </form>
+
+            <h5 class="text-center">
+                 Already have an account?
+                 <a href="{{ route('login') }}">Sign In</a>
+            </h5>
+            <div class="col-sm-10"></div>
+
         </div>
-    </div>
+    </div> <!-- col-sm-8-->
 
 @endsection
