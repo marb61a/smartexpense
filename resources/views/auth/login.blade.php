@@ -29,6 +29,20 @@
                 </div>
             </div> 
 
+            <div class="form-group {{ $errors->has('password') ? 'has-error' : '' }} ">
+                <div class="col-sm-12">
+                    <input id="password" type="password" class="form-control" name="password" placeholder="Password">
+
+                    @if ($errors->has('password'))
+                        <span class="help-block">
+                            <strong>
+                                {{ $errors->first('password') }}
+                            </strong>
+                        </span>
+                    @endif
+                </div>
+            </div>
+
             <div class="form-group">
                 <div class="col-xs-2">
                     <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>

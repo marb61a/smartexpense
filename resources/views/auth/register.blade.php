@@ -101,13 +101,38 @@
                     <div class="col-sm-10">
                         <select class="form-control" name="country" id="country" onchange="get_zones($(this).val())">
                             <option value=""> Choose Country</option>
-                                        
+
                         </select>
 
                         @if($errors->has('country'))
                             <span class="help-block">
                                 <strong>
                                     {{ $errors->first('country') }}
+                                </strong>
+                            </span>
+                        @endif 
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="state" class=" col-sm-2 form-control-label">
+                        State
+                    </label>
+                    <div class="col-sm-10">
+                        <select class="form-control" id="state" name="state">
+                            
+                        </select>
+
+                        <img 
+                            src="{{ asset('/img/spinner.gif') }}" 
+                            id="loader" 
+                            style="position: absolute;right: -9px; top: 9px; display: none;" 
+                        />
+
+                        @if($errors->has('state'))
+                            <span class="help-block">
+                                <strong>
+                                    {{ $errors->first('state') }}
                                 </strong>
                             </span>
                         @endif 
