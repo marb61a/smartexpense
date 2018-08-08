@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="navbar-header">
 				<a href="#" class="navbar-brand heading-style"> 
-					Onliner
+					LaraExpenses
 				</a>
 			</div>
 			<div id="navbar" class="navbar-collapse collapse">
