@@ -102,6 +102,17 @@
                         <select class="form-control" name="country" id="country" onchange="get_zones($(this).val())">
                             <option value=""> Choose Country</option>
 
+                            <?php
+                                $countries = DB::select(DB::raw('select * from countries'));
+                            ?>
+
+                            @if(count($countries)>0)
+                                @foreach($countries as $country)
+                                <option value="{{ $country->id }}">
+                                    {{ $country->name }}
+                                </option>
+                                @endforeach
+                            @endif
                         </select>
 
                         @if($errors->has('country'))
@@ -219,3 +230,4 @@
     </div> <!-- col-sm-8-->
 
 @endsection
+
