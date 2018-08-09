@@ -131,7 +131,7 @@
                     </label>
                     <div class="col-sm-10">
                         <select class="form-control" id="state" name="state">
-                            <option value="">Choose State</option>
+                            <!-- <option value="">Choose State</option> -->
                         </select>
 
                         <img 

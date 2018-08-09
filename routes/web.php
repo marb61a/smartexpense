@@ -12,9 +12,17 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    if(Auth::guest()){
+    	return Redirect::to('login');
+    }
+
+    if(Auth::check()){
+    	return Redirect::to('home');
+    }
 });
 
-Auth::routes();
+Route::post('auth/get_zones','Auth\RegisterController@get_zones');
 
+Auth::routes();
+Route::get('/logout' , 'Auth\LoginController@logout')->name('logout');
 Route::get('/home', 'HomeController@index')->name('home');
