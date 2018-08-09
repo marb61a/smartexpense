@@ -139,6 +139,51 @@
                     </div>
                 </div>
 
+                <div class="form-group {{ $errors->has('city') ? 'has-error' : '' }}">
+                    <label for="city" class=" col-sm-2 form-control-label">
+                        City
+                    </label>
+                    <div class="col-sm-10 ">
+                        <input id="city" type="text" class="form-control" name="city" value="{{ old('city') }}"  autofocus>
+
+                        @if ($errors->has('city'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('city') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group {{ $errors->has('address') ? 'has-error' : '' }}">
+                    <label for="address" class=" col-sm-2 form-control-label">
+                        Address
+                    </label>
+                    <div class="col-sm-10 ">
+                        <input id="address" type="text" class="form-control" name="address" value="{{ old('address') }}"  autofocus>
+
+                        @if ($errors->has('address'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('address') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
+                <div class="form-group {{ $errors->has('post_code') ? 'has-error' : '' }}">
+                    <label for="post_code" class=" col-sm-2 form-control-label">
+                        Postal Code
+                    </label>
+                    <div class="col-sm-10 ">
+                        <input id="post_code" type="text" class="form-control" name="post_code" value="{{ old('post_code') }}"  autofocus>
+
+                        @if ($errors->has('post_code'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('post_code') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-sm-10 col-sm-offset-1">
                         <button type="submit" class="btn btn-danger btn-block">
