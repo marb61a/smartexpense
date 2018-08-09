@@ -184,6 +184,21 @@
                     </div>
                 </div>
 
+                <div class="form-group {{ $errors->has('logo') ? 'has-error' : '' }}">
+                    <label for="logo" class="col-sm-2 form-control-label">
+                        Logo
+                    </label>                      
+                    <div class="col-sm-10 ">
+                        <input id="logo" type="file" class="form-control" name="logo" value="{{ old('logo') }}" autofocus>
+                        
+                        @if ($errors->has('logo'))
+                            <span class="help-block">
+                                <strong>{{ $errors->first('logo') }}</strong>
+                            </span>
+                        @endif
+                    </div>
+                </div>
+
                 <div class="form-group">
                     <div class="col-sm-10 col-sm-offset-1">
                         <button type="submit" class="btn btn-danger btn-block">
