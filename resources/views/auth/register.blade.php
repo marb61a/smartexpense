@@ -126,12 +126,12 @@
                 </div>
 
                 <div class="form-group">
-                    <label for="state" class=" col-sm-2 form-control-label">
+                    <label for="state" class="col-sm-2 form-control-label">
                         State
                     </label>
                     <div class="col-sm-10">
                         <select class="form-control" id="state" name="state">
-                            
+                            <option value="">Choose State</option>
                         </select>
 
                         <img 
@@ -140,7 +140,7 @@
                             style="position: absolute;right: -9px; top: 9px; display: none;" 
                         />
 
-                        @if($errors->has('state'))
+                        @if ($errors->has('state'))
                             <span class="help-block">
                                 <strong>
                                     {{ $errors->first('state') }}
@@ -231,3 +231,19 @@
 
 @endsection
 
+
+@section('script')
+
+    <script>
+        function get_zones(id) {
+            $('#loader').show();
+
+            $.post("/auth/get_zones", {id:id,_token:"{{ csrf_token() }}"})
+                .done(function(e){
+                    $('#state').html(e);
+                    $('#loader').hide();
+                });
+        }
+    </script>
+
+@endsection
