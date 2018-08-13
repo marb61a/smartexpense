@@ -58,11 +58,11 @@ class RegisterController extends Controller
             'password' => 'required|string|min:6|confirmed',
             'phone' => 'required',
             'country' => 'required',
-            'state' => 'required',
+            'state' => 'string|required',
             'city' => 'required',
             'post_code' => 'required',
 
-            // 'logo' => 'required',
+            'logo' => 'required',
         ]);
     }
 
@@ -86,7 +86,7 @@ class RegisterController extends Controller
             'city' =>$data['city'],
             'address' =>$data['address'],
             'post_code' =>$data['post_code'],
-        //    'logo' =>$data['logo'],
+            'logo' =>$data['logo'],
 
         ]);
     }

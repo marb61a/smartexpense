@@ -130,9 +130,9 @@
                         State
                     </label>
                     <div class="col-sm-10">
-                        <select class="form-control" id="state" name="state">
+                        <input class="form-control" id="state" name="state">
                             <!-- <option value="">Choose State</option> -->
-                        </select>
+                        <!-- </select> -->
 
                         <img 
                             src="{{ asset('/img/spinner.gif') }}" 
